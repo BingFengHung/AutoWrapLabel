@@ -89,5 +89,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoWrapLabel\AutoWrapLabel.csproj">
+      <Project>{15312500-5cea-448c-a5ae-854cc9733212}</Project>
+      <Name>AutoWrapLabel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

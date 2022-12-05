@@ -4,9 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestPanel"
+        xmlns:auto="clr-namespace:AutoWrapLabel;assembly=AutoWrapLabel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Resources>
+        <Style TargetType="{x:Type auto:AutoWrapLabel}">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Vertical">
+
+        <auto:AutoWrapLabel Text="abcdefdf" HorizontalContentAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"/>
+
+        <auto:AutoWrapLabel Text="abc**defdf" HorizontalContentAlignment="Center"
+                            VerticalAlignment="Center"
+                            Delimiter="**"
+                            HorizontalAlignment="Left"/>
+
+        <auto:AutoWrapLabel Text="abc*defdf" HorizontalContentAlignment="Center"
+                            VerticalAlignment="Center"
+                            Delimiter="*"
+                            HorizontalAlignment="Left"/>
+    </StackPanel>
 </Window>
