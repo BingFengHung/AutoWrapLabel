@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:AutoWrapLabel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Label HorizontalAlignment="Center" VerticalAlignment="Center">
         <Label.Template>
             <ControlTemplate TargetType="{x:Type Label}">
@@ -19,9 +20,8 @@
 
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-
                                 <Grid HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AutoWrapLabel}}}" 
-                                  VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AutoWrapLabel}}}" >
+                                      VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AutoWrapLabel}}}" >
                                     <TextBlock Text="{Binding}" 
                                            HorizontalAlignment="Center" 
                                            VerticalAlignment="Center"/>
